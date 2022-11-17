@@ -1,25 +1,30 @@
-public class Main{
-    public static void main(String[] agrs) {
-        Dog bobs = new Dog();
-        bobs.setHeight(20);
-        bobs.setWeight(5);
+public class Main {
+    public static class Person {
 
-        Fish nemo = new Fish();
-        nemo.setHeight(1);
+        private int age;
+        public String fullName;
+        public Person() {
 
-        Duck donald = new Duck();
-        donald.setWeight(3);
+        }
+
+        public Person(int age, String fullName) {
+            this.age = age;
+            this.fullName = fullName;
+        }
+
+        public void move() {
+            System.out.println(this.fullName + " говорит");
+        }
+
+        public void talk() {
+            System.out.println(this.fullName + " говорит");
+        }
 
 
-      
-        bobs.run();
-        donald.fly();
-        nemo.swim();
-        letsSwim(nemo);
-        
-    }
-    
-    public static void letsSwim(Swimable obj){
-        obj.swim();
+        public static void main(String[] args) {
+            Person per1 = new Person();
+            Person per2 = new Person(25, "Вася");
+            per2.talk();
+        }
     }
 }
